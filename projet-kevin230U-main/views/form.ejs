@@ -1,0 +1,94 @@
+<%- include('header'); -%>
+<!--bootstrap-->
+<div class="container">
+  <script src="./js/Customer.js"></script>
+    <form class="well form-horizontal" action="/formulaires"  method="post"  id="localizationForm">
+      <fieldset>
+        <div class="ap">
+          <img src="/images/logo.png">
+        </div>
+      <!-- Form Name -->
+          <legend><h1 class="ap"><%= title %></h1></legend>
+          <h1 class="ap"><%= liste %></h1>
+      <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Nom</label>
+                <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" name="Name" required class="form-control" id="NameInput"  >
+                  </div>
+                </div>
+            </div>
+      <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Nombres de Repas</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                    <input type="number" name="NumberofMeals"  class="form-control" id="NumberofMealsInput" required value="1" min="1" max="20" >
+                  </div>
+                </div>
+            </div>
+      <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Rue</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <input type="text" name="address" required class="form-control" id="addressInput">
+                  </div>
+                </div>
+            </div>
+      <!-- Text input-->
+           <div class="form-group">
+               <label class="col-md-4 control-label">Numero de Maison</label>
+                 <div class="col-md-4 inputGroupContainer">
+                   <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                      <input type="number" name= "HomeNumber"  class="form-control" id="HomeNumberInput">
+                   </div>
+                 </div>
+            </div>
+      <!-- Text input-->
+            <div class="form-group">
+               <label class="col-md-4 control-label">Numero de Boite</label>
+                  <div class="col-md-4 inputGroupContainer">
+                     <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input type="number" name= "BoxNumber"  class="form-control" id="BoxNumberInput">
+                     </div>
+                  </div>
+            </div>
+      <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Code Postal</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <input type="number" name= "PostalCode"  class="form-control" id="PostalCodeInput" required value="" min="1000" max="9999">
+                 </div>
+                </div>
+            </div>
+      <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Commune</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <input type="text" name="Commune" required class="form-control" id="Commune">
+                  </div>
+                </div>
+            </div>
+      <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                  <input type="submit" value="Commander" class="btn btn-primary" />
+                  <a href="/Restaurant" class="btn btn-primary">Retour</a>
+                </div>
+            </div>
+      </fieldset>
+    </form>
+</div><!-- /.container -->
+<%- include('footer') -%>

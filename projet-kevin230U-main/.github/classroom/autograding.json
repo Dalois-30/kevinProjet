@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Test default route (/)",
+      "setup": "npm install",
+      "run": "npm test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ESLint",
+      "setup": "npm install",
+      "run": "npm run eslint",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "stylelint",
+      "setup": "npm install",
+      "run": "npm run stylelint",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}

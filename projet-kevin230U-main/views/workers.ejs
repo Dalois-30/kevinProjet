@@ -1,0 +1,26 @@
+<%- include('header'); -%>
+<div class="container">
+  <div class="ap">
+   <img src="/images/logo.png">
+  </div>
+  <h2 class="ap"><%= title %></h2>
+<form action ="/infosComand1/list" method = post>
+  <table class="table table-striped table-dark">
+    <thead  class="text">
+      <tr class="entete">
+        <th >Liste</th>
+        <th >Choix</th>
+      </tr>
+    </thead>
+        <td>
+              <select class="l" id="restaurant" name="restaurant" >
+                <option value="Fin de Siècle">Fin de Siècle</option>
+                <option value="Wolf">Wolf</option>
+                <option value="Makisu">Makisu</option>
+              </select>
+        </td>
+        <td><button type="submit" class="btn btn-success">Choisir</button></td>
+  </table>
+</form>
+</div>
+<%- include('footer') -%>

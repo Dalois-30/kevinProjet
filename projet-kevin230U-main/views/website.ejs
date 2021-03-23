@@ -1,0 +1,79 @@
+<%- include('header'); -%>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3oVmXoVBPbsWNP0MJ13RbNRk9q_u19-s&callback=initMap"></script>
+<body>
+  <form action="/confir" method="post">
+    <div class="hero">
+      <div class="ma_bar">
+        <div class="nav-logo">
+          <img src="/images/logo.png">
+        </div>
+        <!--la barre de navigation-->
+        <div class="liens_naviguer" id="liens_naviguer">
+          <i class="fa fa-close" onclick="closeMenu()"></i>
+          <ul>
+            <a href="/work">
+              <li>Employé</li>
+            </a>
+            <a href="/Manager">
+              <li>Gestionnaire</li>
+            </a>
+          </ul>
+          <button type="button" class="btn btn-success"><a href="/livraison">Livreur</a></button>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+          </div>
+      <div class="titre_du_banner">
+        <h1>Découvrons <span>Quelques<br> Restaurants</span>
+          Bruxellois</h1>
+        <div id="map" class="container"></div>
+       </div>
+      <div class="barre_coté">
+        <div class="icons-de-recherche">
+          <i class="fa fa-th-list"></i>
+          <i class="fa fa-search"></i>
+        </div>
+        <!--end div-->
+        <div class="réseaux">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-google"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-linkedin"></i>
+        </div>
+      </div>
+      <!--end div bootstrap-->
+      <div class="container">
+          <table class="table table-striped table-dark">
+                <thead>
+                    <tr class="entete">
+                      <th scope="col">Nom du Restaurant</th>
+                      <th scope="col">Menu du Jour</th>
+                      <th scope="col">-</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <% listeRestaurant.forEach(item => { %>
+                      <tr>
+                        <td scope="col"><%= item.Name %></td>
+                        <td scope="col"><%= item.Meals %></td>
+                        <td scope="col"><button type="submit" name="item" value="<%= item.Name%>" class="btn btn-primary">Commander </button></td>
+                      </tr>
+                      <% }); %>
+                </tbody>
+          </table>
+      </div>
+    </div>
+ </form>
+ <!--end div bootstrap-->
+  <script src="./js/MesRestos.js">
+      </script>
+    <script>
+      var show = document.getElementById("liens_naviguer");
+      function showMenu() {
+         show.style.right = "0";
+            }
+            function closeMenu() {
+              show.style.right = "-200px";
+            }
+     </script>
+</body>
+<%- include('footer') -%>

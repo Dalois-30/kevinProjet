@@ -1,0 +1,276 @@
+/*========debut=======*/
+/*========debut page complète=======*/
+body{
+  width: auto;
+  margin:auto;
+}
+*{
+  margin:0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.hero{
+ background-image: url(/images/fond2.jpg);
+ background-position: center;
+ background-size: cover;
+ overflow-x: hidden;
+ position: relative;
+}
+.ma_bar{
+  display: flex;
+  padding: 40px 120px;
+}
+.nav-logo img{
+  width: 140px;
+}
+.liens_naviguer{
+  flex: 1;
+}
+.liens_naviguer ul{
+  margin-left: 50px;
+  display: inline;
+}
+.liens_naviguer ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 25px;
+}
+.liens_naviguer ul a{
+  color:white;
+  text-decoration: none;
+  font-size: 13px;
+}
+.liens_naviguer ul li::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background: yellow;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.liens_naviguer ul li:hover::after{
+  width: 100%;
+}
+.btn{
+  padding: 10px 20px;
+  border: 0;
+  background: yellow;
+  font-weight: bold;
+  cursor: pointer;
+}
+.liens_naviguer .btn{
+  float: right;
+}
+.titre_du_banner{
+  margin: 80px 130px;
+  color: white;
+  right: 10px;
+
+}
+.titre_du_banner h1{
+  margin-top: -63px;
+  margin-bottom: 20px;
+}
+.titre_du_banner h1 span{
+  color: yellow;
+}
+.barre_coté{
+  height: 100%;
+  background: #000;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.icons-de-recherche{
+  height: 60%;
+  width: 80px;
+}
+.icons-de-recherche .fa{
+  margin: 45px 23px;
+  display: block;
+  color:#fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+.réseaux{
+ height: 35%;
+ width: 80px;
+ background: rgb(196, 199, 35);
+ text-align: center;
+ padding-top:27%;
+ bottom: 240;
+ position: absolute;
+
+}
+.réseaux .fa{
+  margin: 15px 23px;
+  display: block;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.notif{
+  display: flex;
+  width: 400px;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: yellow;
+  align-items: center;
+}
+.content{
+  flex-basis: 50%;
+  padding: 10px;
+}
+#content a{
+  text-decoration: none;
+  color:black;
+  font-size: 13px ;
+  margin: 0 10px ;
+}
+.content p{
+  text-align: right;
+  margin-top: 10px;
+}
+.ma_bar .fa{
+  display: none;
+}
+@media (max-width: 700px){
+  .barre_coté{
+      display: none;
+  }
+  .titre_du_banner{
+      margin: 30px 20px;
+
+  }
+  .titre_du_banner h1{
+      font-size: 50px;
+
+  }
+  .notif{
+      width: 100%;
+  }
+  .ma_bar{
+      padding: 10px 30px;
+  }
+  .fa-bars{
+      position: absolute;
+      right: 20px;
+      top: 10px;
+  }
+  .ma_bar .fa{
+      display: block;
+      color: white;
+      margin: 10px 25px;
+      font-size: 22px;
+      cursor: pointer;
+  }
+  .liens_naviguer{
+      height: 100vh;
+      width: 200px;
+      background: black;
+      top: 0;
+      right: -200px;
+      position:absolute;
+      text-align: left;
+      z-index: 2;
+      transition: 0.4s;
+  }
+  .liens_naviguer ul a{
+      display:block;
+  }
+  .liens_naviguer .btn{
+      float: none;
+      margin-left: 25px;
+      margin-top: 10px;
+  }
+}
+.card-text {
+  text-decoration: underline;
+  color:green;
+}
+.card-title{
+  text-align: center;
+}
+/*========fin page complète=======*/
+
+.ap{
+  text-align: center;
+  text-decoration: underline;
+}
+.al{
+  text-align: left;
+}
+
+.text{
+  text-decoration: #000;
+}
+
+#map {
+  height: 400px;
+  width: 900px;
+  border: 3px solid green;
+}
+
+.zero{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  background: #8e2de2;
+}
+.confirm-in{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display:flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 00px 0px 10px 0px #666 ;
+}
+
+.confirm-map{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.confirm-form{
+  width: 100%;
+  height: auto;
+  flex: 50%;
+}
+.confirm-form h2{
+  margin-bottom: 10px;
+}
+
+.confirm-form-txt{
+  width: 100%;
+  height: 40px;
+  color: #000;
+  outline: none;
+  margin-bottom: 0px;
+
+}
+.confirm-form-btn{
+  width: 100%;
+  border:none;
+  outline: none;
+  border-radius: 50px;
+  background: #8e2de2;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 10px;
+}
+.l{
+  color:#000;
+}
+.entete{
+color: greenyellow;
+}
